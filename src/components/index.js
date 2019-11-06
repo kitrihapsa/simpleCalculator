@@ -7,63 +7,65 @@ class App extends Component {
     super();
 
     this.state = {
-      result: ""
+        result: ""
     }
-  }
+}
 
-  onClick = button => {
+onClick = button => {
+
     if(button === "="){
-      this.calculate()
+        this.calculate()
     }
 
     else if(button === "C"){
-      this.reset()
+        this.reset()
     }
     else if(button === "CE"){
-      this.backspace()
+        this.backspace()
     }
 
     else {
-      this.setState({
-        result: this.state.result + button
-      })
+        this.setState({
+            result: this.state.result + button
+        })
     }
-  };
+};
 
 
-  calculate = () => {
+calculate = () => {
     var checkResult = ''
     if(this.state.result.includes('--')){
-      checkResult = this.state.result.replace('--','+')
+        checkResult = this.state.result.replace('--','+')
     }
 
     else {
-      checkResult = this.state.result
+        checkResult = this.state.result
     }
 
     try {
-      this.setState({
-        // eslint-disable-next-line
-        result: (eval(checkResult) || "" ) + ""
-      })
+        this.setState({
+            // eslint-disable-next-line
+            result: (eval(checkResult) || "" ) + ""
+        })
     } catch (e) {
-      this.setState({
-        result: "error"
-      })
+        this.setState({
+            result: "error"
+        })
+
     }
-  };
+};
 
-  reset = () => {
+reset = () => {
     this.setState({
-      result: ""
+        result: ""
     })
-  };
+};
 
-  backspace = () => {
+backspace = () => {
     this.setState({
-      result: this.state.result.slice(0, -1)
+        result: this.state.result.slice(0, -1)
     })
-  };
+};
 
   render() {
     return (

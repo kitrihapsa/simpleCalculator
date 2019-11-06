@@ -10,8 +10,8 @@ class KeyPadComponent extends Component {
         {name: "4", text: "4"}, {name: "5", text: "5"}, {name: "6", text: "6"},
         {name: "7", text: "7"}, {name: "8", text: "8"}, {name: "9", text: "9"},
         {name: "0", text: "0"}, {name: "(", text: "("}, {name: ")", text: ")"},
-        {name: "x", text: "x"}, {name: "-", text: "-"}, {name: "=", text: "="},
-        {name: "+", text: "+"}, {name: "÷", text: "÷"}
+        {name: "*", text: "x"}, {name: "-", text: "-"}, {name: "=", text: "="},
+        {name: "+", text: "+"}, {name: "/", text: "÷"}
       ]
     }
   }
